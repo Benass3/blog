@@ -16,11 +16,12 @@ Route::get('/', function () {return view('welcome');});
 
 Route::get('/show/{id}', ['as' => 'show', 'uses' => 'UserController@showAction']);
 
-Route::get('/insert', ['as' => 'insert', 'uses' => 'UserController@insertAction']);
+Route::post('/insert', ['as' => 'insert', 'uses' => 'UserController@insertAction']);
 
-Route::get('/update/{id}', ['as' => 'update', 'uses' => 'UserController@updateAction']);
+Route::post('/update/{id}', ['as' => 'update', 'uses' => 'UserController@updateAction']);
 
 Route::get('/delete/{id}', ['as' => 'delete', 'uses' => 'UserController@deleteAction']);
 
 Route::get('/showAll', ['as' => 'showAll', 'uses' => 'UserController@showAllAction']);
 
+Route::get('/addUserForm', ['as' => 'addUserForm', 'uses' => 'UserController@getAddUserForm']);
